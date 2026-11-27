@@ -325,33 +325,6 @@ export const MOCK_FEES: FeeReceipt[] = [
     status: 'Paid',
     description: 'Tuition Fee, University Examination Fee & Sports Development Fund',
   },
-  {
-    receiptNo: 'REC-2025-06-8812',
-    date: '10-Jan-2026',
-    semester: '6th Semester (Even Sem)',
-    amount: 52500,
-    mode: 'Online (HDFC NetBanking)',
-    status: 'Paid',
-    description: 'Tuition Fee, Laboratory Fee & University Examination Fee',
-  },
-  {
-    receiptNo: 'REC-2025-05-3419',
-    date: '14-Aug-2025',
-    semester: '5th Semester (Odd Sem)',
-    amount: 52500,
-    mode: 'UPI (Google Pay)',
-    status: 'Paid',
-    description: 'Tuition Fee, Library Subscription & Sports Development Fund',
-  },
-  {
-    receiptNo: 'REC-2024-04-1102',
-    date: '12-Jan-2025',
-    semester: '4th Semester (Even Sem)',
-    amount: 49000,
-    mode: 'Online (SBI NetBanking)',
-    status: 'Paid',
-    description: 'Tuition & Academic Development Charges',
-  },
 ];
 
 export const MOCK_TIMETABLE = [
