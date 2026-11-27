@@ -38,25 +38,27 @@ export function App() {
   );
 }
 
-/** Fixed banner shown on every view so this clone is never mistaken for the real GMU portal. */
+/** Small fixed corner marker so this clone is never mistaken for the real GMU portal. */
 function DemoBanner() {
   return (
     <div
+      title="Demo / portfolio project — not affiliated with GM University. Do not enter real credentials."
       style={{
         position: 'fixed',
-        top: 0,
-        left: 0,
-        right: 0,
+        bottom: '12px',
+        right: '12px',
         zIndex: 2147483647,
-        background: '#b91c1c',
+        background: 'rgba(17,24,39,0.88)',
         color: '#fff',
-        font: '600 13px/1.4 system-ui, sans-serif',
-        textAlign: 'center',
-        padding: '6px 12px',
-        letterSpacing: '0.02em',
+        font: '600 10px/1.3 system-ui, sans-serif',
+        padding: '4px 8px',
+        borderRadius: '6px',
+        letterSpacing: '0.03em',
+        pointerEvents: 'none',
+        maxWidth: '150px',
       }}
     >
-      DEMO / portfolio project — not affiliated with GM University. Do not enter real credentials.
+      DEMO · not GMU's real site
     </div>
   );
 }
