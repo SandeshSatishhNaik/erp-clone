@@ -16,7 +16,6 @@ const ERP_STYLES = [
 ];
 
 const DEMO_USN = 'U26M02BA077';
-const DEMO_PASSWORD = '123456';
 
 /**
  * Exact replica of https://erp.gmit.info/gmu_ac/output/login.php.
@@ -95,7 +94,7 @@ export const ERPLogin: React.FC<ERPLoginProps> = ({ onBackToHome, onLoginSuccess
         }
 
         const student = findStudentByUsn(usn);
-        if (!student || pass !== DEMO_PASSWORD) {
+        if (!student) {
           showError(errorSlot, 'Invalid Username or Password.');
           return;
         }

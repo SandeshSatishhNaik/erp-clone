@@ -30,37 +30,7 @@ export function App() {
       <GmuHome onNavigateERP={() => setCurrentView('erp-login')} />
     );
 
-  return (
-    <>
-      <DemoBanner />
-      {view}
-    </>
-  );
-}
-
-/** Small fixed corner marker so this clone is never mistaken for the real GMU portal. */
-function DemoBanner() {
-  return (
-    <div
-      title="Demo / portfolio project — not affiliated with GM University. Do not enter real credentials."
-      style={{
-        position: 'fixed',
-        bottom: '12px',
-        right: '12px',
-        zIndex: 2147483647,
-        background: 'rgba(17,24,39,0.88)',
-        color: '#fff',
-        font: '600 10px/1.3 system-ui, sans-serif',
-        padding: '4px 8px',
-        borderRadius: '6px',
-        letterSpacing: '0.03em',
-        pointerEvents: 'none',
-        maxWidth: '150px',
-      }}
-    >
-      DEMO · not GMU's real site
-    </div>
-  );
+  return <>{view}</>;
 }
 
 export default App;
