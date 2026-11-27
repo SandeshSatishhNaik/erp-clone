@@ -317,6 +317,15 @@ export const MOCK_MARKS: SemesterMarks[] = [
 
 export const MOCK_FEES: FeeReceipt[] = [
   {
+    receiptNo: 'REC-2026-04-7714',
+    date: '10-Apr-2026',
+    semester: '1st Semester (Odd Sem)',
+    amount: 120000,
+    mode: 'Online (HDFC NetBanking)',
+    status: 'Paid',
+    description: 'Tuition Fee, University Examination Fee & Sports Development Fund',
+  },
+  {
     receiptNo: 'REC-2025-06-8812',
     date: '10-Jan-2026',
     semester: '6th Semester (Even Sem)',

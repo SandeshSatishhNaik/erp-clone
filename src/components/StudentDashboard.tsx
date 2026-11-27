@@ -10,7 +10,8 @@ import {
   BookOpen, 
   Download, 
   CheckCircle2, 
-  Printer
+  Printer,
+  X
 } from 'lucide-react';
 import { 
   MOCK_ATTENDANCE, 
@@ -21,7 +22,8 @@ import {
   CURRENT_YEAR 
 } from '../data/mockData';
 import { STUDENTS } from '../data/students';
-import type { StudentProfile } from '../types';
+import type { FeeReceipt, StudentProfile } from '../types';
+import { amountInWords, downloadFeeReceiptPdf } from '../utils/feeReceiptPdf';
 
 const semesterOrdinal = (semester: number) =>
   ['', '1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th'][semester] ?? `${semester}th`;
@@ -35,6 +37,7 @@ interface StudentDashboardProps {
 export const StudentDashboard: React.FC<StudentDashboardProps> = ({ student, onLogout, onBackToHome }) => {
   const [activeTab, setActiveTab] = useState<'overview' | 'attendance' | 'marks' | 'timetable' | 'fees' | 'students'>('overview');
   const [downloadMsg, setDownloadMsg] = useState<string | null>(null);
+  const [previewFee, setPreviewFee] = useState<FeeReceipt | null>(null);
   const [studentQuery, setStudentQuery] = useState('');
 
   const initials = student.name
@@ -54,6 +57,12 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({ student, onL
           .includes(query),
       )
     : STUDENTS;
+
+  const handleDownloadFee = (fee: FeeReceipt) => {
+    downloadFeeReceiptPdf(fee, student);
+    setDownloadMsg(`Downloaded FeeReceipt_${fee.receiptNo}.pdf`);
+    setTimeout(() => setDownloadMsg(null), 3000);
+  };
 
   const triggerDownload = (filename: string) => {
     setDownloadMsg(`Generating & downloading ${filename}...`);
@@ -505,7 +514,8 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({ student, onL
               {MOCK_FEES.map((fee) => (
                 <div
                   key={fee.receiptNo}
-                  className="p-4 rounded-[4px] border border-[#eee4d2] hover:border-gold transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+                  onClick={() => setPreviewFee(fee)}
+                  className="p-4 rounded-[4px] border border-[#eee4d2] hover:border-gold transition-colors flex flex-col sm:flex-row sm:items-center justify-between gap-4 cursor-pointer"
                 >
                   <div className="space-y-1">
                     <div className="flex items-center space-x-2">
@@ -521,11 +531,14 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({ student, onL
 
                   <div className="flex items-center space-x-4 sm:text-right">
                     <div>
-                      <div className="text-lg font-black text-maroon font-mono">₹{fee.amount.toLocaleString()}</div>
+                      <div className="text-lg font-black text-maroon font-mono">₹{fee.amount.toLocaleString('en-IN')}</div>
                       <div className="text-[10px] text-maroon-soft font-semibold">Payment Verified</div>
                     </div>
                     <button
-                      onClick={() => triggerDownload(`FeeReceipt_${fee.receiptNo}.pdf`)}
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        handleDownloadFee(fee);
+                      }}
                       className="p-2.5 rounded-[3px] bg-cream-soft hover:bg-cream text-ink transition-colors"
                       title="Download PDF Receipt"
                     >
@@ -622,6 +635,95 @@ export const StudentDashboard: React.FC<StudentDashboardProps> = ({ student, onL
         )}
 
       </div>
+
+      {/* Fee Receipt Preview */}
+      {previewFee && (
+        <div
+          className="fixed inset-0 z-50 bg-black/55 flex items-start sm:items-center justify-center p-4 overflow-y-auto"
+          onClick={() => setPreviewFee(null)}
+        >
+          <div
+            className="bg-white w-full max-w-2xl rounded-[3px] shadow-2xl overflow-hidden my-8"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="bg-maroon text-white px-6 py-4 flex items-start justify-between">
+              <div className="flex items-center space-x-3">
+                <img src="/gmu-logo.png" alt="GM University logo" className="w-11 h-11 rounded-full bg-white p-0.5" />
+                <div>
+                  <div className="font-serif font-bold text-base leading-tight">GM UNIVERSITY</div>
+                  <div className="text-[10px] text-white/80">Post Box No. 4, P.B. Road, Davanagere - 577006, Karnataka</div>
+                </div>
+              </div>
+              <button onClick={() => setPreviewFee(null)} className="p-1 text-white/80 hover:text-white" title="Close">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-6 space-y-5">
+              <div className="flex items-start justify-between pb-3 border-b border-[#eee4d2]">
+                <div>
+                  <div className="text-sm font-black text-maroon tracking-wide">FEE RECEIPT</div>
+                  <div className="text-[11px] text-mute">Office of the Finance Officer &bull; Academic Year {student.academicYear}</div>
+                </div>
+                <div className="text-right text-[11px] text-mute space-y-0.5">
+                  <div className="font-mono font-bold text-maroon">{previewFee.receiptNo}</div>
+                  <div>{previewFee.date}</div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-xs">
+                {[
+                  ['Student Name', student.name],
+                  ['USN', student.usn],
+                  ['Programme', student.program],
+                  ['Semester / Section', `${previewFee.semester} / ${student.section}`],
+                  ['Category / Quota', student.category],
+                  ["Father's Name", student.fatherName],
+                  ['Payment Mode', previewFee.mode],
+                  ['Transaction Ref', `HDFC${previewFee.receiptNo.replace(/[^0-9]/g, '').slice(-10)}`],
+                ].map(([label, value]) => (
+                  <div key={label} className="flex justify-between gap-3 border-b border-dashed border-[#f0e3cf] py-1">
+                    <span className="text-mute">{label}</span>
+                    <span className="font-semibold text-ink text-right">{value}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="rounded-[3px] bg-cream-soft border border-[#eee4d2] p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div className="text-xs text-mute">
+                  <div className="font-bold text-ink">{previewFee.description}</div>
+                  <div className="mt-1 text-[11px]">Rupees {amountInWords(previewFee.amount)}</div>
+                </div>
+                <div className="text-right">
+                  <div className="text-xl font-black text-maroon font-mono">₹{previewFee.amount.toLocaleString('en-IN')}</div>
+                  <div className="text-[10px] font-bold text-green-700 tracking-wide">PAID</div>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between pt-2 border-t border-[#eee4d2]">
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => handleDownloadFee(previewFee)}
+                    className="inline-flex items-center gap-2 bg-maroon hover:bg-maroon-deep text-white text-xs font-bold px-4 py-2 rounded-[3px]"
+                  >
+                    <Download className="w-4 h-4 text-gold" /> Download PDF
+                  </button>
+                  <button
+                    onClick={() => setPreviewFee(null)}
+                    className="text-xs font-semibold px-4 py-2 rounded-[3px] border border-[#eee4d2] hover:bg-cream-soft"
+                  >
+                    Close
+                  </button>
+                </div>
+                <div className="text-right text-[10px] text-mute">
+                  <div className="font-bold text-ink">Authorised Signatory</div>
+                  Finance Officer, GM University
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Footer */}
       <footer className="bg-white border-t border-[#eee4d2] py-4 text-center text-xs text-mute mt-auto">
