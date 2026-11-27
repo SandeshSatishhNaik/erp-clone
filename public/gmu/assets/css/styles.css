@@ -1,0 +1,1703 @@
+::-moz-selection { /* Code for Firefox */
+  color: black;
+  background: #e2b458;
+}
+
+::selection {
+  color: black;
+  background: #e2b458;
+}
+
+/* header images start  */
+#FET_header{
+  background-image: url('../imgs/fet_header.jpg');
+
+}
+/* mallika */
+ .cordinator_details{
+                display: flex;
+                /* justify-content:space-between ; */
+                gap: 5rem;
+                flex-wrap: wrap;
+}
+body{
+    font-family:'Poppins' !important;
+}
+td {
+  text-align: left !important;
+}
+
+/*header images end */
+
+.text-center{
+  text-align: center !important;
+}
+.increase_width{
+    width:250px !important;
+}
+h1{
+    font-family: 'Prata', serif;
+}
+/* introduction start  */
+.head_font{
+    font-family: 'Prata', serif;
+}
+.header_container{
+    height: 20rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    background-image: url(assets/imgs/gmitnorthfade.jpg);
+}
+.header_container h1{
+    border-left:2px solid gold;
+    margin:0 12rem;
+    padding:0 2rem;
+}
+.padding_centered{
+    padding: 2rem 7rem;
+    text-align: left;
+    line-height: 1.9;
+}
+
+#introduction_header{
+    background-image: url('../imgs/gmitnorthfade.jpg');
+}
+/* introduction end  */
+
+/* educational trust start  */
+
+#educational_trust_header{
+    background-image: url('../imgs/pen_keyboard.jpg');
+}
+#founder_image{
+    width: 14rem;
+    filter: drop-shadow(10px 10px 10px grey);
+    transition: all ease 1s;
+}
+#founder_image:hover{
+    filter: drop-shadow(0 0 0 grey);
+    scale: 1.02;
+    transition: all ease 1s;
+}
+.founder_container{
+    margin: auto;
+    text-align: center;
+}
+.name_header{
+    display: inline-block;
+    background: linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c);
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 5px 20px;
+}
+.name_header h2{
+    color: #651e21;
+}
+.members_container{
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    margin: 3rem;
+    flex-wrap: wrap;
+}
+.members_container div{
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}   
+
+.members_container .img_content{
+    background-image: linear-gradient( to top, rgba(0, 0, 0, 80%), rgba(0, 0, 0, 55%), rgba(0, 0, 0, 20%), rgba(0, 0, 0, 0%) );
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px;
+    color: #fff;
+    font-size:10px !important;
+}
+.img_content b{
+     font-size:15px !important;
+     /*color:black !important;*/
+     
+}
+.img_content h3{
+    color:black !important;
+}
+.img_content {
+    margin-top:30px;
+    background-color:(0,0,2) !important;
+}
+.members_container .img_content h3{
+    font-family: 'Prata', serif;
+    color: #e2b458;
+}
+.members_container .img_content p{
+    color:white !important;
+}
+/* educational trust end  */
+
+/* gmuniversity start  */
+#GMUniversity_header{
+    background-image: url('../imgs/gmuniversity_mockup.jpg');
+
+}
+  /* Two-line navigation layout */
+.nav-menu-two-line {
+    display: grid;
+    grid-template-columns: repeat(9, auto); /* First row: 9 items */
+    grid-template-rows: auto auto;
+    gap: 0;
+    width: 100%;
+}
+
+/* First row items (1-9) */
+.nav-menu-two-line > .nav-link:nth-child(-n+9) {
+    grid-row: 1;
+}
+
+/* Second row items (10-18) */
+.nav-menu-two-line > .nav-link:nth-child(n+10) {
+    grid-row: 2;
+}
+
+/* Remove caret down icons */
+.nav-link i.fa-caret-down,
+.dropdown-link i.fa-caret-down {
+    display: none !important;
+}
+
+/* Hover-based dropdown functionality */
+.nav-link .dropdown,
+.dropdown-link .dropdown.secondd {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown.secondd {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Ensure dropdowns stay open when hovering over them */
+.dropdown:hover,
+.dropdown.secondd:hover {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Better alignment for nav items */
+.nav-link {
+    padding: 1px 13px;
+    white-space: nowrap;
+}
+
+.nav-link > a {
+    display: block;
+    padding: 0;
+}
+.nav-menu-two-line {
+    grid-template-columns: repeat(8, auto);
+}
+.nav-menu-two-line > .nav-link:nth-child(-n+8) {
+    grid-row: 1;
+}
+.nav-menu-two-line > .nav-link:nth-child(n+9) {
+    grid-row: 2;
+}
+  
+.gmumodel{
+
+    background-image: url('../imgs/gold_bg_circles.png');
+    background-color: #651e21;
+    color: white;
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.gmumodel div{
+    width: 35rem;
+    height: 35rem;
+    text-align: center;
+    justify-content: center;
+    /* border: 0.1px solid #e2b45855; */
+    display: flex;
+    align-items: center;
+}
+#gmu_model li{
+    list-style: none;
+}
+#gmu_model{
+    background-image: url('../imgs/gold_bg_circles.png');
+    background-color: #5b1f1f;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 10px 15px  30px 0 rgba(0, 0, 0, 0.49);
+    padding: 1rem;
+
+    
+}
+#gmu_model td{
+    border: none !important; 
+    padding: 2rem;
+    /* text-align: justify; */
+    width: 30rem;
+    height: 20rem;
+    /* border-radius: 20px;  */
+    /* transition: all 1s ease; */
+    /* margin: 1rem; */
+
+}
+#gmu_model h2{
+    color: #e2b458;
+    border-bottom: 2px solid #e2b458;
+    padding-bottom: 0.2rem;
+
+}
+
+
+
+/* gmuniversity end  */
+
+
+/* vision mission start  */
+#vision_mission{
+    background-image: url('../imgs/gmuclockimg.jpg');
+}
+.vision_mission_ul{
+    padding: 0 7rem;
+    border-bottom: 2px solid #e2b458;
+}
+.vision_mission_ul li{
+    /* list-style: bullets; */
+    line-height: 1.9;
+    text-align: justify;
+}
+.gold_heading{
+    font-size: 1.8rem;
+    color: #e2b458;
+    font-weight: 600;
+    border-bottom: 2px solid #e2b458;
+}
+/* vision mission end  */
+
+
+
+/* bod  */
+
+/* hhs */
+.responsive-table table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  text-align: left;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #bbb;
+  padding: 4px 8px;
+}
+tbody {
+ vertical-align: top;   
+}
+
+th {
+  white-space: nowrap;
+}
+
+.responsive-table {
+  overflow: hidden;
+}
+
+.responsive-table > div {
+  /*background: linear-gradient(white, white), linear-gradient(white, white) right, radial-gradient(at 0 50%, rgba(0, 0, 0, .3), transparent 70%), radial-gradient(at 100% 50%, rgba(0, 0, 0, .3), transparent 70%) right;*/
+  background-size: 10px 100%;
+  background-repeat: no-repeat;
+  background-attachment: local, local, scroll, scroll;
+  overflow: auto;
+}
+
+
+/* ugdcyu */
+  
+  @media (min-width: 52em) {
+    .responsive-table {
+      font-size: .9em;
+    }
+    .responsive-table thead {
+      position: relative;
+      clip: auto;
+      height: auto;
+      width: auto;
+      overflow: auto;
+    }
+    .responsive-table tr {
+      display: table-row;
+    }
+    .responsive-table th,
+    .responsive-table td {
+      display: table-cell;
+      padding: .5em;
+    }
+  
+    .responsive-table caption {
+      font-size: 1.5em;
+    }
+    .responsive-table tbody {
+      display: table-row-group;
+    }
+    .responsive-table tbody tr {
+      display: table-row;
+      border-width: 1px;
+    }
+    .responsive-table tbody tr:nth-of-type(even) {
+      /*background-color: rgba(94, 93, 82, 0.1);*/
+    }
+    .responsive-table tbody th[scope="row"] {
+      background-color: transparent;
+      color: #5e5d52;
+      text-align: left;
+    }
+    .responsive-table tbody td {
+      text-align: center;
+    }
+    .responsive-table tbody td[data-title]:before {
+      content: none;
+    }
+  }
+  @media (min-width: 62em) {
+    .responsive-table {
+      font-size: 1em;
+    }
+    .responsive-table th,
+    .responsive-table td {
+      padding: .75em .5em;
+    }
+    .responsive-table tfoot {
+      font-size: .9em;
+    }
+  }
+  
+  @media (min-width: 75em) {
+    .responsive-table th,
+    .responsive-table td {
+      padding: .75em;
+    }
+  }
+  
+  /* bod end  */
+
+/* chancellor start  */
+
+#chancellor_header{
+    background-image: url('../imgs/leaves.jpg');
+    background-size: cover;
+}
+.leaders_container h1{
+    text-align: center;
+}
+.leaders_container img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    position: absolute;
+    top: -7rem;
+    border: 5px solid #e2b458;
+}
+/* chancellor end  */
+
+
+
+/* campus  */
+.map-container{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* campus end  */
+
+
+/* best pratices  */
+.best-start{
+  text-align: center;
+}
+.bestcards{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 90%;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.bestcampus{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin-top: 30px;
+  border-bottom: 1px solid #efd178;
+
+}
+.bestdata{
+  margin-left: 10px;
+}
+.bestalign{
+  text-align: start;
+}
+
+
+
+/* organisation gmu  */
+
+.organimg{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  /* box-shadow: 0px 15px  30px 0 rgba(0, 0, 0, 0.268); */
+  /*filter: drop-shadow(0px 2px  5px black );*/
+
+
+}
+
+/* campus tour start */
+.campus_tour_frame_container{
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  margin: 5%;
+
+}
+.campus_tour_frame{
+  width: 80vw;
+  height: 80vh;
+  border-radius: 0.5rem;
+  /* border: 5px solid #e2b458; */
+}
+
+ /* progress bar style */
+#nprogress .bar {
+  background: #e2b458 !important;
+}
+:root {
+  --livewire-progress-bar-color: red !important;
+}
+#nprogress .spinner-icon {
+  border-top-color: #e2b458 !important;
+  border-left-color: #e2b458 !important;
+}
+
+/* campus tour end  */
+
+/*campus contact number start */
+.table_left tr td{
+  /* text-align: left; */
+}
+/* contact number end  */
+/* respnsive  */
+
+@media (max-width: 720px){
+  .padding_centered{
+    padding: 1.5rem;
+  }
+  .organimg{
+  width: 95% !important;
+  margin: auto;
+  text-align: center;
+  /* box-shadow: 0px 15px  30px 0 rgba(0, 0, 0, 0.268); */
+  /*filter: drop-shadow(0px 2px  5px black );*/
+
+
+}
+  .transportframe{
+    flex-direction: column !important;
+  }
+  .campus_tour_frame_container video{
+    width: 350px !important;
+    height: 200px !important;
+  }
+  .header_container h1{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0 50px 0 50px;
+    
+  }
+  .header_container{
+    height: 15rem;
+    background-size: cover;
+    background-position: right;
+    margin-top: 50px !important;
+  }
+
+  .leaders_container{
+    margin: 0;
+    top: -7rem !important;
+    padding: 1.5rem;
+  }
+
+  .leaders_container1{
+    margin: 0 !important;
+    padding: 0rem;
+  }
+  
+
+  .members_container{
+    margin: 1rem;
+  }
+  #gmu_model {
+    border-radius: 0;
+  }
+  #gmu_model td {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #gmu_model tr {
+    display: block;
+  }
+  }
+
+
+  /* skill introduction  */
+
+.skillcontent{
+    padding-top: .2rem !important;
+    padding: 2rem;
+}
+.skillcontent ol li{
+  margin-left: 2rem;
+}
+
+/* sovt page  */
+
+.sovtpage{
+  
+}
+.sovtdean{
+  margin-top: 8rem !important;
+}
+.sovtdata{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 850px;
+}
+.sovtdata2{
+  margin-top: 1rem;
+}
+.sovtdata2 h1{
+  margin-bottom: 1rem;
+}
+.sovtdata2 ol li{
+  margin-left: 2rem;
+}
+
+/* Admission Enquiry */
+.no_color_diffrence{
+  margin:2rem auto;
+  width: 80%;
+  margin-bottom: 1.5em;
+}
+.no_color_diffrence{
+
+  border-collapse: collapse;
+}
+.no_color_diffrence thead{
+  background: linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c);
+}
+.no_color_diffrence td{
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* admission process */
+.adpr form {
+  /* max-width: auto; */
+  margin: 5rem;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.adpr h1 {
+  text-align: center;
+  color: #333;
+}
+
+.adpr label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #555;
+}
+
+.adpr input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.adprplace{
+  display:flex;
+  gap:2rem;
+  justify-content: center;
+}
+
+select {
+  /* Additional styles for select element if needed */
+}
+
+.adpr textarea {
+  height: 100px;
+}
+
+.adpr input[type="submit"] {
+  background-color: #ecc35c;
+  color: #8a414c;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  max-width:5rem;
+}
+
+.adpr input[type="submit"]:hover {
+  background-color: #f7f3b7;
+}
+
+/* library */
+.subhead{
+  color:#8a414c;
+  background:linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c);
+  text-align:center;
+  padding: 5px 20px;
+  width: 350px;
+  /* display: inline-block;  */
+  border-radius: 5px;
+  margin:auto;
+}
+
+@media (max-width: 720px){
+  .subhead{
+    padding: 1.5rem;
+    max-width:350px !important;
+  }
+  .subhead {
+    font-size: 15px !important;
+  }
+}
+@media (max-width:720px){
+  center img{
+      width: 300px !important;
+  }
+}
+
+/* header images start  */
+#FET_header{
+  background-image: url('../imgs/fet_header.jpg');
+
+}
+
+/*header images end */
+
+.text-center{
+  text-align: center;
+}
+
+h1{
+    font-family: 'Prata', serif;
+}
+/* introduction start  */
+.head_font{
+    font-family: 'Prata', serif;
+}
+.header_container{
+    height: 20rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    font-size: 1.2rem;
+    margin-top: 130px;
+    display: flex;
+    align-items: center;
+}
+.header_container h1{
+    border-left:2px solid gold;
+    margin:0 12rem;
+    padding:0 2rem;
+}
+.padding_centered{
+    padding: 2rem 7rem;
+    text-align: left;
+    line-height: 1.9;
+}
+
+#introduction_header{
+    background-image: url('../imgs/gmitnorthfade.jpg');
+}
+/* introduction end  */
+
+/* educational trust start  */
+
+#educational_trust_header{
+    background-image: url('../imgs/pen_keyboard.jpg');
+}
+.img_image{
+  width: 28rem !important;
+}
+#founder_image{
+    width: 14rem;
+    filter: drop-shadow(10px 10px 10px grey);
+    transition: all ease 1s;
+}
+#founder_image:hover{
+    filter: drop-shadow(0 0 0 grey);
+    scale: 1.02;
+    transition: all ease 1s;
+}
+.founder_container{
+    margin: auto;
+    text-align: center;
+}
+.name_header{
+    display: inline-block;
+    background: linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c);
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 5px 20px;
+}
+.name_header h2{
+    color: #651e21;
+}
+.members_container{
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    margin: 3rem;
+    flex-wrap: wrap;
+}
+.members_container div{
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}   
+
+.members_container .img_content{
+    background-image: linear-gradient( to top, rgba(0, 0, 0, 80%), rgba(0, 0, 0, 55%), rgba(0, 0, 0, 20%), rgba(0, 0, 0, 0%) );
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 15px;
+    color: #fff;
+}
+.members_container .img_content h3{
+    font-family: 'Prata', serif;
+    color: #e2b458;
+}
+/* educational trust end  */
+
+/* gmuniversity start  */
+#GMUniversity_header{
+    background-image: url('../imgs/gmuniversity_mockup.jpg');
+
+}
+.gmumodel{
+
+    background-image: url('../imgs/gold_bg_circles.png');
+    background-color: #651e21;
+    color: white;
+    display: flex;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.gmumodel div{
+    width: 35rem;
+    height: 35rem;
+    text-align: center;
+    justify-content: center;
+    /* border: 0.1px solid #e2b45855; */
+    display: flex;
+    align-items: center;
+}
+#gmu_model li{
+    list-style: none;
+}
+
+#gmu_model td{
+    /* border: 1px solid #e2b458; */
+    padding: 2rem;
+    /* text-align: justify; */
+    width: 30rem;
+    height: 20rem;
+    /* border-radius: 20px;  */
+    /* transition: all 1s ease; */
+    /* margin: 1rem; */
+
+}
+#gmu_model h2{
+    color: #e2b458;
+    border-bottom: 2px solid #e2b458;
+    padding-bottom: 0.2rem;
+
+}
+
+
+
+/* gmuniversity end  */
+
+
+/* vision mission start  */
+#vision_mission{
+    background-image: url('../imgs/gmuclockimg.jpg');
+}
+.vision_mission_ul{
+    padding: 0 7rem;
+    border-bottom: 2px solid #e2b458;
+}
+.vision_mission_ul li{
+    /* list-style: bullets; */
+    line-height: 1.9;
+    text-align: justify;
+}
+.gold_heading{
+    font-size: 1.8rem;
+    color: #e2b458;
+    font-weight: 600;
+    border-bottom: 2px solid #e2b458;
+}
+/* vision mission end  */
+
+
+
+/* bod  */
+.responsive-table {
+    margin: auto;
+    width: 60%;
+    margin-bottom: 1.5em;
+  }
+  .responsive-table thead {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    background: linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c);
+
+  }
+
+  .responsive-table thead th {
+    /* border: 1px solid #1d96b2; */
+    font-weight: bold;
+    text-align: center;
+    color: #651e21;
+    
+    
+  }
+  .responsive-table thead th:first-of-type {
+    text-align: left;
+  }
+  .responsive-table tbody,
+  .responsive-table tr,
+  .responsive-table th,
+  .responsive-table td {
+    display: block;
+    padding: 0;
+    white-space: normal;
+    text-align: left;
+  }
+  .responsive-table th,
+  .responsive-table td {
+    padding: .5em;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .responsive-table caption {
+    margin-bottom: 1em;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+  }
+  .responsive-table tfoot {
+    font-size: .8em;
+    font-style: italic;
+  }
+  .responsive-table tbody tr {
+    margin-bottom: 1em;
+    /* border: 2px solid #1d96b2; */
+  }
+  .responsive-table tbody tr:last-of-type {
+    margin-bottom: 0;
+  }
+  .responsive-table tbody th[scope="row"] {
+    /* background-color: #1d96b2; */
+    color: white;
+  }
+  .responsive-table tbody td[data-type=currency] {
+    text-align: right;
+  }
+  .responsive-table tbody td[data-title]:before {
+    content: attr(data-title);
+    float: left;
+    font-size: .8em;
+    color: rgba(94, 93, 82, 0.75);
+  }
+  .responsive-table tbody td {
+    text-align: right;
+
+  }
+  
+  
+  .clubs_img_container{
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  @media (min-width: 52em) {
+    .responsive-table {
+      font-size: .9em;
+    }
+    .responsive-table thead {
+      position: relative;
+      clip: auto;
+      height: auto;
+      width: auto;
+      overflow: auto;
+    }
+    .responsive-table tr {
+      display: table-row;
+    }
+    .responsive-table th,
+    .responsive-table td {
+      display: table-cell;
+      padding: .5em;
+    }
+  
+    .responsive-table caption {
+      font-size: 1.5em;
+    }
+    .responsive-table tbody {
+      display: table-row-group;
+    }
+    .responsive-table tbody tr {
+      display: table-row;
+      border-width: 1px;
+    }
+    .responsive-table tbody tr:nth-of-type(even) {
+      /*background-color: rgba(94, 93, 82, 0.1);*/
+    }
+    .responsive-table tbody th[scope="row"] {
+      background-color: transparent;
+      color: #5e5d52;
+      text-align: left;
+    }
+    .responsive-table tbody td {
+      text-align: center;
+    }
+    .responsive-table tbody td[data-title]:before {
+      content: none;
+    }
+  }
+  @media (min-width: 62em) {
+    .responsive-table {
+      font-size: 1em;
+    }
+    .responsive-table th,
+    .responsive-table td {
+      padding: .75em .5em;
+    }
+    .responsive-table tfoot {
+      font-size: .9em;
+    }
+  }
+  
+  @media (min-width: 75em) {
+    .responsive-table th,
+    .responsive-table td {
+      padding: .75em;
+    }
+  }
+  
+  /* bod end  */
+
+/* chancellor start  */
+
+#chancellor_header{
+    background-image: url('../imgs/leaves.jpg');
+    background-size: cover;
+}
+.leaders_container{
+    background: white;
+    margin:0 10rem;
+    position: relative;
+    top: -6rem;
+    padding: 3rem;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.9;
+    box-shadow: 0px 15px  30px 0 rgba(0, 0, 0, 0.268);
+    margin-bottom: 3rem;
+}
+.leaders_container h1{
+    text-align: center;
+}
+.leaders_container img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    position: absolute;
+    top: -5rem;
+    border: 5px solid #e2b458;
+}
+/* chancellor end  */
+
+
+
+/* campus  */
+.map-container{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* campus end  */
+
+
+/* best pratices  */
+.best-start{
+  text-align: center;
+}
+.bestcards{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 90%;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.bestcampus{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  /* align-items: center; */
+  margin-top: 30px;
+  border-bottom: 1px solid #efd178;
+
+}
+.bestdata{
+  margin-left: 10px;
+}
+.bestalign{
+  text-align: start;
+}
+
+
+
+/* organisation gmu  */
+
+.organimg{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  /* box-shadow: 0px 15px  30px 0 rgba(0, 0, 0, 0.268); */
+  /*filter: drop-shadow(0px 2px  5px black );*/
+
+
+}
+
+/* campus tour start */
+.campus_tour_frame_container{
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  margin: 5%;
+
+}
+.campus_tour_frame{
+  width: 80vw;
+  height: 80vh;
+  border-radius: 0.5rem;
+  /* border: 5px solid #e2b458; */
+}
+
+ /* progress bar style */
+#nprogress .bar {
+  background: #e2b458 !important;
+}
+:root {
+  --livewire-progress-bar-color: red !important;
+}
+#nprogress .spinner-icon {
+  border-top-color: #e2b458 !important;
+  border-left-color: #e2b458 !important;
+}
+
+/* campus tour end  */
+
+/*campus contact number start */
+.table_left tr td{
+  /* text-align: left; */
+}
+/* contact number end  */
+/* respnsive  */
+
+@media (max-width: 720px){
+  .padding_centered{
+    padding: 1.5rem;
+  }
+  .header_container h1{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 0 50px 0 50px;
+  }
+  .header_container{
+    height: 15rem;
+    background-size: cover;
+    background-position: right;
+
+  }
+
+  .leaders_container{
+    margin: 0;
+    top: 10rem;
+    padding: 1.5rem;
+  }
+
+  .leaders_container1{
+    margin: 0 !important;
+    padding: 0rem;
+  }
+  
+
+  .members_container{
+    margin: 1rem;
+  }
+  #gmu_model {
+    border-radius: 0;
+  }
+  #gmu_model td {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  #gmu_model tr {
+    display: block;
+  }
+  }
+
+
+  /* skill introduction  */
+
+.skillcontent{
+    padding-top: .2rem !important;
+    padding: 2rem;
+}
+.skillcontent ol li{
+  margin-left: 2rem;
+}
+
+/* sovt page  */
+
+.sovtpage{
+  
+}
+.sovtdean{
+  margin-top: 8rem !important;
+}
+.sovtdata{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 10px;
+}
+.sovtdata2{
+  margin-top: 1rem;
+}
+.sovtdata2 h1{
+  margin-bottom: 1rem;
+}
+.sovtdata2 ol li{
+  margin-left: 2rem;
+}
+
+/*proctor*/
+
+@media (max-width: 600px) 
+{.proctor_container{
+  margin:0 !important;
+}}
+
+.proctor_container{
+  background: white;
+  margin:0 10rem;
+  top: 45rem;
+  padding: 3rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.9;
+  box-shadow: 0px 15px  30px 0 rgba(0, 0, 0, 0.268);
+  margin-bottom: 3rem;
+}
+.proctor_container h2{
+  text-align: center;
+  border-bottom: 2px solid #e2b458;
+}
+
+
+.proctor_container img{
+  width: 200px;
+  height: 200px;
+  margin-left:50px;
+  margin-right:50px;
+  border-radius: 100%;
+  /* position: absolute; */
+  top: -5rem;
+  border: 5px solid #e2b458;
+}
+.proctor_image_container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Admission Enquiry */
+.no_color_diffrence{
+  margin:2rem auto;
+  width: 80%;
+  margin-bottom: 1.5em;
+  overflow-x: auto;
+}
+
+@media (max-width: 600px) {
+  th, td {
+      display: block;
+      width: 100%;
+  }
+}
+
+.no_color_diffrence{
+
+  border-collapse: collapse;
+}
+.no_color_diffrence thead{
+  background: linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c);
+  color: #8a414c;
+  text-align: center;
+  height: 40px !important;
+}
+.no_color_diffrence td{
+  border: 1px solid black;
+  padding: 10px;
+}
+.no_color_diffrence td a {
+    color: black;
+    text-align: center !important;
+    align-items: center !important;
+}
+
+
+/* admission process */
+.adpr{
+  max-width: 500px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.adpr label {
+  display: block;
+  margin: 10px 0 5px;
+  color: #555;
+}
+
+.adpr input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.adprplace{
+  display:flex;
+  gap:2rem;
+  justify-content: center;
+}
+
+.adpr textarea {
+  height: 100px;
+}
+
+.adpr input[type="submit"] {
+  background-color: #ecc35c;
+  color: #8a414c;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  max-width:5rem;
+}
+
+
+.twoimg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+
+.twoimg img{
+  width: 400px;
+
+}
+input[type="submit"]:hover {
+  background-color: #f7f3b7;
+}
+
+.centerdiv{
+  align-items: center;
+  
+}
+ 
+@media (max-width: 720px) {
+  .twoimg img{
+    width: 150px !important;
+  
+  }
+} 
+
+.adpr input[type="submit"]:hover {
+  background-color: #f7f3b7;
+}
+
+/* Library */
+
+#libgal{
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex ;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.libcontainer{
+  width:85%;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-gap:30px;
+}
+
+.libcard{
+  background-color: fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.libcard img{
+  width:100%;
+  height:200px;
+  border-radius: 5px 5px 0 0;
+}
+
+.libcontent{
+  padding:20px;
+}
+
+.libcontent h2{
+  color:#8a414c;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.libcontent p{
+ 
+  text-align: center !important;
+}
+
+
+@media screen and (max-width: 800px){
+  .libcontainer{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 600px){
+  .libcontainer{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* dean */
+.proctor_image_container span{
+  font-style: italic;
+  font-weight: lighter;
+  font-size:medium;
+}
+
+
+/* campus life transport  */
+.transportframe{
+  display: flex;
+  flex-direction: row;
+
+}
+.transportframe img{
+  width: 300px;
+  margin: 10px;
+  
+}
+
+.belowmsg{
+  /* margin-top: 300px; */
+}
+
+/* phd admissions */
+@media (max-width: 720px){
+  .phdad{
+    padding-left: 25px !important;
+  }
+}
+
+.placementcard img{
+  width:100%;
+  height:400px;
+  border-radius: 5px 5px 0 0;
+}
+
+
+/* sdtcd */
+
+* School of Digital Technical Competency Development */
+
+@media (max-width: 720px){
+  .base_sidebar_container{
+    display: flex;
+    flex-direction: column;
+  }
+  .sidebar_tcd table{
+    /* display: none; */
+  }
+}
+.sidebar_tcd {
+  padding:0 50px;
+  z-index: 10;
+  border-radius: 5px;
+}
+.sidebar_tcd table td{
+  border: none;
+  user-select: none;
+
+}
+.sidebar_tcd table td p{
+  font-weight: 400;
+}
+.sidebar_tcd table td p:hover{
+  color: blue;
+}
+.tdc_sidebar_semester_label:hover{
+  color: blue;
+  cursor: pointer;
+}
+.tdc_sidebar_semester_label{
+ background-color:#5b1f1f;   
+}
+ 
+.sidebar_tcd li{
+  padding: 5px 0;
+  text-align: left;
+}
+.base_sidebar_container{
+  display: flex;
+}
+.sidebar_tcd h3{
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  background: linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c);
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+.sidebar_tcd table td{
+
+    border-radius:10px;
+    text-align:center;
+}
+.head_strip{
+  background: linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c);
+  color: #5b1f1f;
+  padding: 5px 0;
+  font-size:20px;
+  border-radius:3px !important;
+  border:2px solid #5b1f1f;
+}
+.tcd_courses
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: left;
+  margin:2rem 5rem ;
+  
+}
+.course_block{
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.292);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 5px;
+  /* font-weight: bold; */
+  font-size: 12px;
+  font-weight: bold;
+  width: 12rem;
+  height: 12rem;
+  align-items: center;
+  cursor: pointer;
+  transition:all 0.5s ease;
+  
+  border: 2px solid #8a414c;
+}
+.course_block a{
+  color: #000;
+}
+
+.course_block:hover{
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.292);
+  scale: 1.03;
+  transition:all 0.5s ease;
+  
+}
+.course_block img{
+  height: 50px;
+}
+
+.it_non_label{
+  width: 50px;
+}
+
+.tcd_top_bar{
+  display: flex;
+  gap: 2rem;
+  margin-left: 4rem;
+  /* margin-bottom: 2rem; */
+}
+
+.tcd_top_bar a{
+  /* background: linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c); */
+  background-color: #fff;
+  width: 12rem;
+  padding:10px 5px;
+  text-align: center;
+  /* border-radius: 5px; */
+  transition:all 0.5s ease;
+  color: #000;
+   font-weight:bold;
+  border-radius: 5px 5px 0 0;
+}
+.tcd_top_bar a:hover{
+  /* box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.292);
+  scale: 1.02;
+  transition:all 0.5s ease; */
+}
+.active_tdc_tab{
+    background: linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c);
+    color: #5b1f1f;
+    border-top:2px solid #5b1f1f;
+    border-left:2px solid #5b1f1f;
+    border-right:2px solid #5b1f1f;
+}
+
+.back_tdc{
+  background: linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c);
+  padding: 0.5rem 3rem;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #000;
+}
+
+

@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+/* GM University brand tokens - pulled from gmu.ac.in master.css / styles.css
+   and the ERP custom.css (erp.gmit.info) */
+@theme {
+  --color-maroon: #5b1f1f;
+  --color-maroon-deep: #651e21;
+  --color-maroon-soft: #8a414c;
+  --color-maroon-dark: #461616;
+
+  --color-gold: #ecc35c;
+  --color-gold-deep: #e2b458;
+  --color-gold-light: #efd178;
+  --color-cream: #f7f3b7;
+  --color-cream-soft: #fdf9ee;
+
+  --color-ink: #2d2020;
+  --color-mute: #5e5d52;
+
+  --font-sans: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Prata', Georgia, 'Times New Roman', serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 400;
+  }
+
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-maroon);
+  }
+}
+
+/* Repeating brand gradients used across gmu.ac.in */
+@utility gmu-topbar {
+  background: linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c);
+}
+
+@utility gmu-gold-gradient {
+  background: linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c);
+}
+
+@utility gmu-maroon-gradient {
+  background: linear-gradient(to right, #651e21, #5b1f1f);
+}
+
+@utility gmu-maroon-bg {
+  background-color: #5b1f1f;
+}
+
+/* Scrollbar in brand colours */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4ecdf;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8a414c;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5b1f1f;
+}
+
+/* ERP login helpers, mirroring the PHPRunner pretty-login screen */
+.erp-logo {
+  font-size: 40px;
+  font-weight: 700;
+  color: #5b1f1f;
+  line-height: 1.1;
+  filter: drop-shadow(2px 4px 6px #ffc635);
+}
+
+.erp-input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-family: var(--font-sans);
+  background: #fff;
+  color: #2d2020;
+}
+
+.erp-input:focus {
+  outline: none;
+  border-color: #e2b458;
+  box-shadow: 0 0 0 2px rgba(236, 195, 92, 0.35);
+}
+
+.erp-signin {
+  background: linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c);
+  color: #000;
+  font-weight: 700;
+  border: none;
+  padding: 10px 24px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.erp-signin:hover {
+  color: #21201f;
+  filter: brightness(1.04);
+}
+
+/* Table headers use the same gold gradient as the live ERP */
+.gmu-table thead tr {
+  background: linear-gradient(to left, #ecc35c, #f7f3b7, #ecc35c);
+}
+
+.gmu-table thead th {
+  color: #5b1f1f;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------------------
+   Cloned gmu.ac.in homepage (/gmu/home.html)
+   Tailwind's preflight flattens headings to inherited size/weight, while the
+   live site relies on the browser's default heading scale. Restore it inside
+   the clone only; the site's own stylesheets and inline styles still win.
+--------------------------------------------------------------------------- */
+#gmu-site {
+  overflow-x: hidden;
+}
+
+#gmu-site h1,
+#gmu-site h2,
+#gmu-site h3,
+#gmu-site h4,
+#gmu-site h5,
+#gmu-site h6 {
+  font-weight: 700;
+}
+
+#gmu-site h1 { font-size: 2em; }
+#gmu-site h2 { font-size: 1.5em; }
+#gmu-site h3 { font-size: 1.17em; }
+#gmu-site h4 { font-size: 1em; }
+#gmu-site h5 { font-size: 0.83em; }
+#gmu-site h6 { font-size: 0.67em; }
+
+#gmu-site b,
+#gmu-site strong {
+  font-weight: 700;
+}
